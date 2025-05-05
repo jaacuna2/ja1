@@ -1,0 +1,36 @@
+public class Comida {
+    public String sabor;
+    public int cantidad;
+    public double precio;
+
+    public Comida(String sabor, int cantidad, double precio) {
+        this.sabor = sabor;
+        this.cantidad = cantidad;
+        this.precio = precio;
+    }
+
+    public void mostrarInfo() {
+        System.out.println("Sabor: " + sabor);
+        System.out.println("Cantidad: " + cantidad);
+        System.out.println("Precio: $" + precio);
+    }
+
+    public static void main(String[] args) {
+        Comida comida1 = new Comida("Dulce", 2, 4.50);
+        comida1.mostrarInfo();
+    }
+}
+phyton 
+class Comida:
+    def __init__(self, sabor, cantidad, precio):
+        self.sabor = sabor
+        self.cantidad = cantidad
+        self.precio = precio
+
+    def mostrar_info(self):
+        print(f"Sabor: {self.sabor}")
+        print(f"Cantidad: {self.cantidad}")
+        print(f"Precio: ${self.precio}")
+
+comida1 = Comida("Dulce", 2, 4.50)
+comida1.mostrar_info()
