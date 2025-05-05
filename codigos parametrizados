@@ -1,0 +1,45 @@
+public class Persona {
+    String nombre;
+    int edad;
+
+    // Constructor parametrizado
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+}
+public class Libro {
+    String titulo;
+    String autor;
+    int paginas;
+
+    // Constructor parametrizado
+    public Libro(String titulo, String autor, int paginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.paginas = paginas;
+    }
+}
+public class Coche {
+    String marca;
+    String modelo;
+    int año;
+
+    // Constructor parametrizado
+    public Coche(String marca, String modelo, int año) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.año = año;
+    }
+}
+public class CuentaBancaria {
+    String numeroCuenta;
+    double saldo;
+
+    // Constructor parametrizado
+    public CuentaBancaria(String numeroCuenta, double saldo) {
+        this.numeroCuenta = numeroCuenta;
+        this.saldo = saldo;
+    }
+}
+
