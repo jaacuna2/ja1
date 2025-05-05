@@ -1,0 +1,42 @@
+public class Estudiante {
+    String nombre;
+    int edad;
+
+    // Constructor por defecto
+    public Estudiante() {
+        nombre = "Desconocido";
+        edad = 0;
+    }
+
+    public void mostrarDatos() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad);
+    }
+}
+public class Producto {
+    String nombre;
+    double precio;
+
+    // Constructor por defecto
+    public Producto() {
+        nombre = "Sin nombre";
+        precio = 0.0;
+    }
+
+    public void mostrarProducto() {
+        System.out.println("Producto: " + nombre);
+        System.out.println("Precio: $" + precio);
+    }
+}
+public class Animal {
+    String especie;
+
+    // Constructor por defecto
+    public Animal() {
+        especie = "Desconocida";
+    }
+
+    public void hacerSonido() {
+        System.out.println("Este animal hace un sonido genérico.");
+    }
+}
