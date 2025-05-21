@@ -1,0 +1,38 @@
+public class Transistor {
+    
+    private String tipo;    
+    private String modelo;  
+
+    
+    public Transistor() {
+    }
+
+    
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    
+    public void mostrarInfo() {
+        System.out.println("Tipo de transistor: " + tipo);
+        System.out.println("Modelo: " + modelo);
+    }
+
+   
+    public double calcularCorriente(double voltaje, double resistencia) {
+        return voltaje / resistencia;
+    }
+}
