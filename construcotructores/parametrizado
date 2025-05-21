@@ -1,0 +1,24 @@
+public class Capacitor {
+  
+    double capacitancia;    
+    double voltajeMaximo; 
+    String unidadVoltaje;  
+
+  
+    public Capacitor(double c, double v, String unidad) {
+        capacitancia = c;
+        voltajeMaximo = v;
+        unidadVoltaje = unidad;
+    }
+
+    
+    public void mostrarInfo() {
+        System.out.println("Capacitancia: " + capacitancia + " F");
+        System.out.println("Voltaje Máximo: " + voltajeMaximo + " " + unidadVoltaje);
+    }
+
+    
+    public double calcularEnergia() {
+        return formula ;
+    }
+}
