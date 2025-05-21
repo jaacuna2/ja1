@@ -1,0 +1,38 @@
+public class Main {
+    public static void main(String[] args) {
+        Resistor r1 = new Resistor();
+        r1.valor = 4;
+        r1.valor1 = 2;
+        r1.tolerancia = 5;
+        r1.tipo = "carbono";
+
+        r1.mostrarInfo();
+        System.out.println("Cálculo de caída de corriente: " + r1.calcularCaidaCorriente());
+    }
+    
+}
+public class Resistor {
+    int valor;      
+    int valor1;    
+    int tolerancia; 
+    String tipo;    
+
+   
+    public Resistor() {
+    }
+
+   
+    public void mostrarInfo() {
+        System.out.println("Valor: " + valor + " ohmios");
+        System.out.println("Tolerancia: " + tolerancia + "%");
+        System.out.println("Tipo: " + tipo);
+    }
+
+    public double calcularCaidaCorriente() {
+            double resultado = (double) valor / valor1;
+            return resultado;
+            System.out.println("resultado es ");
+            return 0;
+        }
+    }
+}
