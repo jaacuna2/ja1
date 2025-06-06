@@ -5,6 +5,7 @@ public class Main {
         r1.valor1 = 2;
         r1.tolerancia = 5;
         r1.tipo = "carbono";
+//constructor vacio 
 
         r1.mostrarInfo();
         System.out.println("Cálculo de caída de corriente: " + r1.calcularCaidaCorriente());
