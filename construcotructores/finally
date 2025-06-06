@@ -1,0 +1,19 @@
+public class EjemploFinally {
+
+    public void dividir(int a, int b) {
+        try {
+            int resultado = a / b;
+            System.out.println("Resultado: " + resultado);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: División por cero.");
+        } finally {
+            System.out.println("Este bloque siempre se ejecuta.");
+        }
+    }
+
+    public static void main(String[] args) {
+        EjemploFinally ejemplo = new EjemploFinally();
+        ejemplo.dividir(10, 2); // Imprime Resultado y finally
+        ejemplo.dividir(10, 0); // Imprime error y finally
+    }
+}
