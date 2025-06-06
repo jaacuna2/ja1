@@ -1,0 +1,13 @@
+public class Sensor {
+    private String nombre;
+
+    public Sensor(String nombre) {
+        this.nombre = nombre;
+    }
+
+    // Método recursivo sin condición de parada (provoca StackOverflowError)
+    public void verificarEstado() {
+        System.out.println("Verificando el estado del sensor: " + nombre);
+        verificarEstado(); // Llamada recursiva infinita
+    }
+}
