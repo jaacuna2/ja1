@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Sensor {
+    private String tipo;
+    private double rangoMinimo;
+    private double rangoMaximo;
+    private String unidad;
+
+    // Constructor vacío
+    public Sensor() {}
+
+    // Método para pedir datos por consola
+    public void leerDatos() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el tipo de sensor: ");
+        tipo = scanner.nextLine();
+
+        System.out.print("Ingrese el rango mínimo: ");
+        rangoMinimo = scanner.nextDouble();
+
+        System.out.print("Ingrese el rango máximo: ");
+        rangoMaximo = scanner.nextDouble();
+        scanner.nextLine(); // Limpiar el buffer
+
+        System.out.print("Ingrese la unidad de medida: ");
+        unidad = scanner.nextLine();
+    }
+
+    // Método para mostrar los datos del sensor
+    public void mostrarInformacion() {
+        System.out.println("\n--- Información del Sensor ---");
+        System.out.println("Tipo: " + tipo);
+        System.out.println("Rango: " + rangoMinimo + " a " + rangoMaximo + " " + unidad);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Sensor sensor = new Sensor();
+        sensor.leerDatos();
+        sensor.mostrarInformacion();
+    }
+}
