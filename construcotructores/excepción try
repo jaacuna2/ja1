@@ -1,0 +1,5 @@
+public class VoltajeInvalidoException extends Exception {
+    public VoltajeInvalidoException(String mensaje) {
+        super(mensaje);
+    }
+}
