@@ -1,24 +1,37 @@
-public class Capacitor {
-  
-    double capacitancia;    
-    double voltajeMaximo; 
-    String unidadVoltaje;  
+public class Sensor {
+    private String tipo;
+    private double rangoMinimo;
+    private double rangoMaximo;
+    private String unidad;
 
-  
-    public Capacitor(double c, double v, String unidad) {
-        capacitancia = c;
-        voltajeMaximo = v;
-        unidadVoltaje = unidad;
+    // Constructor parametrizado
+    public Sensor(String tipo, double rangoMinimo, double rangoMaximo, String unidad) {
+        this.tipo = tipo;
+        this.rangoMinimo = rangoMinimo;
+        this.rangoMaximo = rangoMaximo;
+        this.unidad = unidad;
     }
 
-    
-    public void mostrarInfo() {
-        System.out.println("Capacitancia: " + capacitancia + " F");
-        System.out.println("Voltaje Máximo: " + voltajeMaximo + " " + unidadVoltaje);
+    public void mostrarInformacion() {
+        System.out.println("Tipo de sensor: " + tipo);
+        System.out.println("Rango de medición: " + rangoMinimo + " a " + rangoMaximo + " " + unidad);
     }
 
-    
-    public double calcularEnergia() {
-        return formula ;
+    // Métodos getters y setters si los necesitas
+    public String getTipo() { return tipo; }
+    public double getRangoMinimo() { return rangoMinimo; }
+    public double getRangoMaximo() { return rangoMaximo; }
+    public String getUnidad() { return unidad; }
+}
+
+// Programa principal
+public class Main {
+    public static void main(String[] args) {
+        // Crear un objeto sensor usando el constructor parametrizado
+        Sensor sensorTemperatura = new Sensor("Temperatura", -40, 125, "°C");
+        sensorTemperatura.mostrarInformacion();
+
+        Sensor sensorPresion = new Sensor("Presión", 0, 10, "bar");
+        sensorPresion.mostrarInformacion();
     }
 }
