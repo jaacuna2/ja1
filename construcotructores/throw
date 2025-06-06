@@ -1,0 +1,15 @@
+public class EjemploThrow {
+
+    public void setEdad(int edad) {
+        if (edad < 0) {
+            throw new IllegalArgumentException("La edad no puede ser negativa");
+        }
+        System.out.println("Edad establecida: " + edad);
+    }
+
+    public static void main(String[] args) {
+        EjemploThrow ejemplo = new EjemploThrow();
+        ejemplo.setEdad(25); // Correcto
+        ejemplo.setEdad(-5); // Lanza excepción
+    }
+}
