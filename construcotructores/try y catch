@@ -1,0 +1,17 @@
+public class EjemploTryCatch {
+
+    public void convertirCadenaANumero(String cadena) {
+        try {
+            int numero = Integer.parseInt(cadena);
+            System.out.println("Número convertido: " + numero);
+        } catch (NumberFormatException e) {
+            System.out.println("Error: La cadena no es un número válido.");
+        }
+    }
+
+    public static void main(String[] args) {
+        EjemploTryCatch ejemplo = new EjemploTryCatch();
+        ejemplo.convertirCadenaANumero("123");   // Correcto
+        ejemplo.convertirCadenaANumero("abc");   // Lanza excepción
+    }
+}
