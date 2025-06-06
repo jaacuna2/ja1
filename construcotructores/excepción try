@@ -1,5 +1,58 @@
-public class VoltajeInvalidoException extends Exception {
+import java.util.Scanner;
+
+// Excepción personalizada para voltaje inválido
+class VoltajeInvalidoException extends Exception {
     public VoltajeInvalidoException(String mensaje) {
         super(mensaje);
+    }
+}
+
+// Clase Actuador orientada a objetos
+class Actuador {
+    private String nombre;
+    private double voltajeMinimo;
+    private double voltajeMaximo;
+
+    public Actuador(String nombre, double voltajeMinimo, double voltajeMaximo) {
+        this.nombre = nombre;
+        this.voltajeMinimo = voltajeMinimo;
+        this.voltajeMaximo = voltajeMaximo;
+    }
+
+    // Método para activar el actuador, lanza excepción si el voltaje es inválido
+    public void activar(double voltaje) throws VoltajeInvalidoException {
+        if (voltaje < voltajeMinimo || voltaje > voltajeMaximo) {
+            throw new VoltajeInvalidoException(
+                "El voltaje " + voltaje + "V está fuera del rango permitido para el actuador '" +
+                nombre + "' (" + voltajeMinimo + "V - " + voltajeMaximo + "V)."
+            );
+        }
+        System.out.println("Actuador '" + nombre + "' activado con " + voltaje + "V.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Entrada de datos por consola
+        System.out.print("Ingrese el nombre del actuador: ");
+        String nombre = scanner.nextLine();
+
+        System.out.print("Ingrese el voltaje mínimo permitido: ");
+        double min = scanner.nextDouble();
+
+        System.out.print("Ingrese el voltaje máximo permitido: ");
+        double max = scanner.nextDouble();
+
+        Actuador actuador = new Actuador(nombre, min, max);
+
+        try {
+            System.out.print("Ingrese el voltaje de activación: ");
+            double voltaje = scanner.nextDouble();
+
+            actuador.activar(voltaje);
+        }
+        // No hay bloque catch, solo try
     }
 }
